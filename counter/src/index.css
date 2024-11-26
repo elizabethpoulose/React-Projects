@@ -1,0 +1,22 @@
+#root {
+  background-color: #315b96;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.counter-container {
+  max-width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 30px 15px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  opacity: 0.9;
+}
+
+.counter-value {
+  font-size: 70px;
+  margin-bottom: 10px;
+}
