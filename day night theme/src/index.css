@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.form-check.form-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.switch {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 1rem;
+  margin-right: 100px;
+}
