@@ -2,4 +2,4 @@
 ### 2 [Form](https://github.com/ruturajjadhav07/React-Projects/tree/main/form)
 ### 3 [Counter](https://github.com/ruturajjadhav07/React-Projects/tree/main/counter)
 ### 4 [Background Color Changer](https://github.com/ruturajjadhav07/React-Projects/tree/main/backgroundColorChange)
-### 5 [check](https://github.com/ruturajjadhav07/React-Projects/blob/main/jokegenerator/src/App.jsx)
+### 5 [Word Calculator](https://github.com/ruturajjadhav07/React-Projects/tree/main/word%20calculator)
