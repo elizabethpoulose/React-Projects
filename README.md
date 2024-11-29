@@ -3,3 +3,4 @@
 ### 3 [Counter](https://github.com/ruturajjadhav07/React-Projects/tree/main/counter)
 ### 4 [Background Color Changer](https://github.com/ruturajjadhav07/React-Projects/tree/main/backgroundColorChange)
 ### 5 [Word Calculator](https://github.com/ruturajjadhav07/React-Projects/tree/main/word%20calculator)
+### 6 [Day Night Theme](https://github.com/ruturajjadhav07/React-Projects/tree/main/day%20night%20theme)
