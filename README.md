@@ -1,4 +1,4 @@
-### 1 [Joke Generator](https://github.com/ruturajjadhav07/React-Projects/tree/main/props)
+### 1 [Props](https://github.com/ruturajjadhav07/React-Projects/tree/main/props)
 ### 2 [Joke Generator](https://github.com/ruturajjadhav07/React-Projects/tree/main/jokegenerator)
 ### 3 [Form](https://github.com/ruturajjadhav07/React-Projects/tree/main/form)
 ### 4 [Counter](https://github.com/ruturajjadhav07/React-Projects/tree/main/counter)
