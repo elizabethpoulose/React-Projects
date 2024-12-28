@@ -52,12 +52,11 @@ const Login = ({ setUser }) => {
   const [password, setPassword] = useState();
   const navigate = useNavigate();
 
-  // Handle form submission
   const submit = (e) => {
     e.preventDefault();
 
     if (username === "admin" && password === "admin") {
-      console.log("Login Successful");
+      // console.log("Login Successful");
       navigate("/welcome");
       setUser(username);
     } else {
@@ -65,7 +64,7 @@ const Login = ({ setUser }) => {
     }
   };
 
-  // Redirect to Sign Up page
+
   const signUp = () => {
     navigate("/signup");
   };

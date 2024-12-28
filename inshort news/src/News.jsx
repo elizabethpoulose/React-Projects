@@ -1,26 +1,34 @@
 import { React, useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 const News = () => {
   const [data, setData] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetchApi();
   }, []);
 
   const fetchApi = () => {
-    let url = `https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=097dd625635b408bb7245370fffa26dc&language=en`;
+    let url = `https://newsdata.io/api/1/latest?apikey=pub_63224df0ef624779ab8eddf292a215374904e&q=pizza`;
+
+
     fetch(url, {
       headers: {
         Accept: "application/json",
       },
     })
       .then((response) => response.json())
-      .then((data) => setData(data.articles))
+      .then((data) => {
+        setData(data.results);
+        setLoading(false);
+      })
       .catch((error) => {
         console.log("Error:", error);
+        setError("Failed to load articles");
+        setLoading(false);
       });
   };
 
@@ -33,26 +41,31 @@ const News = () => {
   );
 
   return (
-    <div className="container mt-4">
+    <div className="container">
       <div className="row">
         <div className="col-sm-12">
           <div className="newsContent">
-            <div className="search mb-4">
+            <div><h1 className="">News</h1></div>
+            <div className="search mt-5 position-sticky top-0">
               <input
                 type="text"
                 className="form-control"
                 placeholder="Search Articles"
                 value={searchQuery}
                 onChange={handleSearchChange}
-                style={{ marginBottom: "20px" }}
+                style={{ marginBottom: "10px" }}
               />
             </div>
+
+            {loading && <p>Loading news...</p>}
+            {error && <p>{error}</p>}
+
             {filteredArticles && filteredArticles.length > 0 ? (
               filteredArticles.map((article, index) => (
                 <div key={index} className="mb-4">
-                  {article.urlToImage && (
+                  {article.image_url && (
                     <img
-                      src={article.urlToImage}
+                      src={article.image_url}
                       alt={article.title}
                       className="img-fluid mb-3"
                       style={{
@@ -78,7 +91,7 @@ const News = () => {
                       fontStyle: "italic",
                     }}
                   >
-                    {article.source?.name}
+                    {article.source_id || "Unknown Source"}
                   </h5>
                   <p
                     style={{
@@ -99,7 +112,7 @@ const News = () => {
                     {article.description}
                   </p>
                   <a
-                    href={article.url}
+                    href={article.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -117,7 +130,7 @@ const News = () => {
                 </div>
               ))
             ) : (
-              <p>Loading news...</p>
+              <p>No articles found</p>
             )}
           </div>
         </div>

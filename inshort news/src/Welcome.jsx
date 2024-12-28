@@ -5,20 +5,21 @@ const Component = ({ username }) => {
   const navigate = useNavigate();
 
   const button = () => {
-    navigate("/News");
+    navigate("/mainpage");
   };
 
   const styles = {
     container: {
       textAlign: "center",
       padding: "20px",
+      marginTop: "250px",
     },
     heading: {
       fontSize: "2rem",
       marginBottom: "20px",
     },
     button: {
-      width: "100%",
+      // width: "100%",
       padding: "10px",
       fontSize: "1rem",
       backgroundColor: "#007bff",
@@ -35,13 +36,18 @@ const Component = ({ username }) => {
   return (
     <div style={styles.container}>
       <h1 style={styles.heading}>
-        Hello {username} <br />Welcome to <br /> NewSpot
+        Hello {username} <br />
+        Welcome to <br /> NewSpot
       </h1>
       <button
         style={styles.button}
         onClick={button}
-        onMouseOver={(e) => (e.target.style.backgroundColor = styles.buttonHover.backgroundColor)}
-        onMouseOut={(e) => (e.target.style.backgroundColor = styles.button.backgroundColor)}
+        onMouseOver={(e) =>
+          (e.target.style.backgroundColor = styles.buttonHover.backgroundColor)
+        }
+        onMouseOut={(e) =>
+          (e.target.style.backgroundColor = styles.button.backgroundColor)
+        }
       >
         News
       </button>

@@ -4,9 +4,11 @@ import Login from "./Login";
 import Signup from "./Signup";
 import Welcome from "./Welcome";
 import News from "./News";
+import Profile from "./Profile";
+import MainPage from "./Mainpage"; 
 
 const App = () => {
-  const [username, setUser] = useState(localStorage.getItem("username"));
+  const [username, setUser] = useState(localStorage.getItem("username") || "");
 
   useEffect(() => {
     if (username) {
@@ -18,9 +20,11 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Login setUser={setUser} />} />
-        <Route path="/welcome" element={<Welcome username={username} />} />
-        <Route path="/news" element={<News />} />
         <Route path="/signup" element={<Signup setUser={setUser} />} />
+        <Route path="/welcome" element={<Welcome username={username} />} />
+        <Route path="/mainpage" element={<MainPage />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/profile" element={<Profile username = {username} />} />
       </Routes>
     </Router>
   );
