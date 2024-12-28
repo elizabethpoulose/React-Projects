@@ -8,4 +8,7 @@
 ### 8 [Guessing Game](https://github.com/ruturajjadhav07/React-Projects/tree/main/guessing%20game)
 ### 9 [Pokemon](https://github.com/ruturajjadhav07/React-Projects/tree/main/pokemon)
 ### 10 [Navbar](https://github.com/ruturajjadhav07/React-Projects/blob/main/navbar)
-### 10 [Modal using Inputs](https://github.com/ruturajjadhav07/React-Projects/tree/main/modal%20using%20inputs)
+### 11 [Modal using Inputs](https://github.com/ruturajjadhav07/React-Projects/tree/main/modal%20using%20inputs)
+### 12 [Github Username](https://github.com/ruturajjadhav07/React-Projects/tree/main/github%20username)
+### 13 [Inshort News](https://github.com/ruturajjadhav07/React-Projects/tree/main/inshort%20news)
+### 14 [Country](https://github.com/ruturajjadhav07/React-Projects/tree/main/country)
